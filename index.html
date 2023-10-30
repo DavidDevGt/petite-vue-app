@@ -1,12 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/petite-vue/0.4.1/petite-vue.es.min.js" integrity="sha512-+mwC2X6oKBsTR4fZeDCn4Ll9ir9L5VQKXdT2NYvxGygAkHBqveuKMYiMWldThWnNa57FMZRvVLiHndjTQJ3ezQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-</head>
-<body>
-    
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Starter Template Petite-Vue-API-PHP</title>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/petite-vue/0.4.1/petite-vue.es.min.js"
+      integrity="sha512-+mwC2X6oKBsTR4fZeDCn4Ll9ir9L5VQKXdT2NYvxGygAkHBqveuKMYiMWldThWnNa57FMZRvVLiHndjTQJ3ezQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.11.10/dayjs.min.js"
+      integrity="sha512-FwNWaxyfy2XlEINoSnZh1JQ5TRRtGow0D6XcmAWmYCRgvqOUTnzCxPc9uF35u5ZEpirk1uhlPVA19tflhvnW1g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"
+      integrity="sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/navigo/8.11.1/navigo.min.js"
+      integrity="sha512-J8D8QABVZk+v5H+5nllq6DgHBiOcmhRjqAgJZm4d4d46JUBc1yrasvzbxbwNFLsK3FZmAS4TnjSyR5j7dyxdpw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div id="login">
+      <h3>Iniciar Sesión</h3>
+      <input type="text" placeholder="Usuario" class="form-control" />
+      <input type="password" placeholder="Contraseña" class="form-control" />
+      <button class="btn btn-primary">Iniciar Sesión</button>
+      <a href="#/register">Registrarme</a>
+    </div>
+
+    <div id="register" style="display: none">
+      <h3>Registrarme</h3>
+      <input type="text" placeholder="Usuario" class="form-control" />
+      <input type="password" placeholder="Contraseña" class="form-control" />
+      <button class="btn btn-success" onclick="register()">Registrarme</button>
+      <a href="#/login">Iniciar Sesión</a>
+    </div>
+
+    <div id="welcome" style="display: none">
+      <h3>Bienvenido</h3>
+      <button class="btn btn-danger" onclick="logout()">Cerrar Sesión</button>
+    </div>
+
+    <script src="main.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
