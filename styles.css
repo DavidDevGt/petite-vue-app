@@ -1,54 +1,77 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+}
+
 .container {
-    max-width: 400px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #f2f2f2;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-  }
-  
-  h3 {
+    max-width: 600px;
+}
+
+.card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: none;
+    border-radius: 8px;
+    background-color: #ffffff;
+}
+
+.card-title {
     font-size: 24px;
     margin-bottom: 20px;
-  }
-  
-  input.form-control {
-    margin-bottom: 10px;
-    padding: 8px 12px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-  }
-  
-  button.btn {
-    padding: 8px 16px;
-    font-size: 16px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  button.btn-primary {
-    background-color: #007bff;
-    color: #fff;
-  }
-  
-  button.btn-success {
-    background-color: #28a745;
-    color: #fff;
-  }
-  
-  button.btn-danger {
-    background-color: #dc3545;
-    color: #fff;
-  }
-  
-  a {
-    display: block;
+    color: #333;
+}
+
+form {
     margin-top: 10px;
+}
+
+form label {
+    font-weight: 600;
+    color: #555;
+}
+
+form input {
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+form button {
+    width: 100%;
+    border-radius: 4px;
+    font-size: 16px;
+    padding: 10px 0;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border: none;
+}
+
+.btn-success {
+    background-color: #28a745;
+    border: none;
+}
+
+.btn-danger {
+    background-color: #dc3545;
+    border: none;
+}
+
+a {
+    color: #007bff;
     text-decoration: none;
-  }
-  
-  a:hover {
+}
+
+a:hover {
     text-decoration: underline;
-  }
+}
+
+/* Estilos para dispositivos móviles */
+@media only screen and (max-width: 768px) {
+    .container {
+        padding: 0 15px;
+    }
+
+    .card {
+        margin: 10px 0;
+    }
+}
