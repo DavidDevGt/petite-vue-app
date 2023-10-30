@@ -4,9 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Starter Template Petite-Vue-API-PHP</title>
+    <script src="https://unpkg.com/petite-vue"></script>
     <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/petite-vue/0.4.1/petite-vue.es.min.js"
-      integrity="sha512-+mwC2X6oKBsTR4fZeDCn4Ll9ir9L5VQKXdT2NYvxGygAkHBqveuKMYiMWldThWnNa57FMZRvVLiHndjTQJ3ezQ=="
+      src="https://cdnjs.cloudflare.com/ajax/libs/petite-vue/0.4.1/petite-vue.iife.min.js"
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
@@ -34,26 +34,33 @@
       integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="styles.css">
   </head>
   <body>
-    <div id="login">
+    <!-- Página de Inicio de Sesión -->
+    <div class="container mt-5" v-if="currentPage === 'login'">
       <h3>Iniciar Sesión</h3>
       <input type="text" placeholder="Usuario" class="form-control" />
       <input type="password" placeholder="Contraseña" class="form-control" />
       <button class="btn btn-primary">Iniciar Sesión</button>
-      <a href="#/register">Registrarme</a>
+      <a href="#/register" @click="navigateTo('register')">Registrarme</a>
     </div>
 
-    <div id="register" style="display: none">
+    <!-- Página de Registro -->
+    <div class="container mt-5" v-if="currentPage === 'register'">
       <h3>Registrarme</h3>
       <input type="text" placeholder="Usuario" class="form-control" />
       <input type="password" placeholder="Contraseña" class="form-control" />
+        <input type="password" placeholder="Confirmar Contraseña" class="form-control" />
       <button class="btn btn-success" onclick="register()">Registrarme</button>
-      <a href="#/login">Iniciar Sesión</a>
+      <a href="#/login" @click="navigateTo('login')">Iniciar Sesión</a>
     </div>
 
-    <div id="welcome" style="display: none">
+    <!-- Página de Bienvenida -->
+    <div class="container mt-5" v-if="currentPage === 'welcome'">
       <h3>Bienvenido</h3>
+      <!-- Fecha actual usando Day.js -->
+      <p>Hoy es: {{ dayjs().format('DD/MM/YYYY') }}</p>
       <button class="btn btn-danger" onclick="logout()">Cerrar Sesión</button>
     </div>
 
